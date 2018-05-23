@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/tv_point"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="5dp"
+          android:layout_height="5dp"
+          android:layout_alignRight="@id/iv_download"
+          android:layout_alignTop="@id/iv_download"
+          android:background="@mipmap/point_red"
+          android:gravity="center"
+          android:paddingLeft="3dp"
+          android:paddingRight="3dp"
+          android:text=""
+          android:visibility="gone"
+          android:textColor="@color/white"
+          android:textSize="10sp">
+
+</TextView>

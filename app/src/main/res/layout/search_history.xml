@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:id="@+id/line01"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/divider_grey"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:id="@+id/line02"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/divider_grey"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider01"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divider_grey"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/ll_numTwo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv04"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:id="@+id/line03"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/divider_grey"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv05"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:id="@+id/line04"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/divider_grey"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv06"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider02"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divider_grey"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/ll_numThree"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv07"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:id="@+id/line05"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/divider_grey"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv08"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:id="@+id/line06"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/divider_grey"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv09"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_14sp"
+            android:visibility="invisible"
+
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

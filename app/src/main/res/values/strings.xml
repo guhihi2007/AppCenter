@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">应用市场</string>
+    <!--主页-->
+    <string name="recommend">推荐</string>
+    <string name="software">软件</string>
+    <string name="game">游戏</string>
+    <string name="rank">榜单</string>
+    <string name="mine">我</string>
+
+
+    <string name="open">打开</string>
+    <string name="upgrade">升级</string>
+    <string name="download">下载</string>
+    <string name="waiting">等待中</string>
+    <string name="continue_">继续</string>
+    <string name="retry">重试</string>
+    <string name="install">安装</string>
+    <string name="installing">安装中</string>
+    <string name="already_pause">已暂停</string>
+    <string name="auto_upgrade_is_pause">零流量升级已暂停</string>
+    <string name="wait_wifi_download">等待Wi-Fi继续下载</string>
+    <string name="uninstall">卸载</string>
+    <string name="download_complete_wait_install">下载完成,待安装</string>
+    <string name="install_fail_sign">签名冲突，安装失败</string>
+    <string name="install_fail">安装失败</string>
+    <string name="download_memory_error">内存空间不足,下载失败</string>
+    <string name="install_memory_error">内存空间不足,安装失败</string>
+    <string name="download_error">下载失败,请重试</string>
+    <string name="download_error_2">等待Wi-Fi连接后开始任务</string>
+    <!--应用管理-->
+    <string name="getback_password_tips">请为账号设置新登录密码，密码长度为6-20个字符，区分大小写。建议使用字母、数字与标点的组合，可大幅提高账号安全度。</string>
+
+    <!--分类-->
+    <string name="category">分类</string>
+
+    <!--反馈-->
+    <string name="feedback">反馈</string>
+    <string name="version">版本 ：</string>
+    <string name="system">系统 ：</string>
+    <string name="model">型号 ：</string>
+    <string name="network">网络 ：</string>
+    <string name="send">发送</string>
+    <string name="please_input_message">请输入信息</string>
+
+    <!--任务管理-->
+    <string name="task_manager">任务管理</string>
+    <string name="app_download">应用下载</string>
+    <string name="app_install">应用安装</string>
+
+    <string name="copy_aleardy">已复制</string>
+    <string name="get_data_failure">获取数据失败，请重试!</string>
+
+    <string name="expand">展开</string>
+    <string name="collapsed">收起</string>
+    <string name="new_version_features">新版本特性：</string>
+    <string name="computing">计算中...</string>
+
+    <string name="cancel">取消</string>
+    <string name="order_wifi_download">预约Wi-Fi下载</string>
+    <string name="continue_mobile_download">继续流量下载</string>
+    <string name="app_upgrade_empty_tips">厉害！您的应用都是最新版</string>
+    <string name="app_install_empty_tips">啊哈，都安装完了，要不去逛逛？</string>
+    <string name="app_download_empty_tips">空空如也</string>
+    <string name="now_download">随便逛逛</string>
+    <string name="storage_space_not_enough_change_path">手机空间小于%dMB，可能导致下载安装失败，是否清理内存？</string>
+    <string name="go_setting">去设置</string>
+    <string name="download_mobile_network_tips">当前处于2G/3G/4G环境，下载应用将消耗流量，您有%d个下载任务，是否继续下载？</string>
+    <string name="download_exit_tips">%d个任务正在下载，确定退出？</string>
+    <string name="download_exit_continue_tips">继续未完成的下载并安装</string>
+    <string name="clean">清理</string>
+    <string name="download_no_network">当前没有可用的网络，请检查您的网络设置。</string>
+    <string name="one_key_download">一键下载</string>
+    <string name="one_key_install">一键安装(%d)</string>
+    <string name="close">关闭</string>
+    <string name="all_upgrade">全部升级</string>
+    <string name="ignore_upgrade">已忽略升级</string>
+    <string name="ignore">忽略</string>
+    <string name="upgrade_tips">发现应用市场新版本</string>
+    <string name="setting">设置</string>
+
+    <string name="memory_download_error">"手机空间不足，无法完成下载，请清理内存释放空间！"</string>
+    <string name="memory_install_error">"手机空间不足，无法完成安装，请清理内存释放空间！"</string>
+
+
+    <!-- 自动装String -->
+    <string name="acc_auto_install_service_description">"「应用市场自动装」可以在安装和升级应用时，无需一直盯着手机，「应用市场自动装」会帮你点击所需的按钮，确保应用顺利安装。
+
+打开服务时，系统会弹出例行的警告。应用市场承诺不会通过本功能收集你的隐私信息。
+
+如果你强制关闭「应用市场自动装」，或使用内存清理工具关闭「应用市场自动装」，会造成「应用市场自动装」功能被系统关闭。为保证正常使用，请将「应用市场自动装」放入清理白名单中。
+
+
+「应用市场自动装」无需获取手机 Root 权限，支持 Android 4.1 以上系统。</string>
+    <string name="acc_auto_install_service_name">应用市场自动装</string>
+    <string name="app_auto_install_confirm">确定</string>
+    <string name="app_auto_install_confirm_risk">我已充分了解该风险,继续安装</string>
+    <string name="app_auto_install_done">完成</string>
+    <string name="app_auto_install_done_miui">我知道了</string>
+    <string name="app_auto_install_finish_miui">完成</string>
+    <string name="app_auto_install_install">安装</string>
+    <string name="app_auto_install_delete_pakage">删除</string>
+    <string name="app_auto_install_continue_install">继续安装</string>
+    <string name="app_auto_install_lenovo_install_success">安装成功</string>
+    <string name="app_auto_install_lenovo_install_success_button">完成</string>
+    <string name="app_auto_install_lenovo_no_perm">该应用没有申请任何权限</string>
+    <string name="app_auto_install_lenovo_pass_le_security">已通过乐安全防病毒检测</string>
+    <string name="app_auto_install_lenovo_perm">该应用申请了以下权限：</string>
+    <string name="app_auto_install_next">下一步</string>
+    <string name="app_auto_install_setting_button">知道了</string>
+    <string name="app_auto_install_setting_desc">%s功能需要你授权确认，本功能不会带来任何风险。</string>
+    <string name="app_auto_install_open">开启「应用市场自动装」</string>
+    <string name="app_auto_install_close">关闭「应用市场自动装」</string>
+    <string name="view_ignored_apps">查看已忽略升级</string>
+    <string name="hide_ignored_apps">收起已忽略升级</string>
+
+    <string name="exit_with_uninstalled">%1$s未安装，是否马上安装？</string>
+    <string name="exit_with_multi_uninstalled">%1$s等%2$d款应用未安装，是否马上安装？</string>
+
+</resources>

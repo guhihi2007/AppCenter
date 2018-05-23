@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 外套一层，防止头布局部分失效 -->
+    <RelativeLayout
+        android:id="@+id/refreshlishview_headerview_temp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <!-- 下拉刷新头布局部分 -->
+        <RelativeLayout
+            android:id="@+id/refreshlishview_headerview"
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+
+            <RelativeLayout
+                android:id="@+id/icon_container_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:id="@+id/icon_container_ivs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/recyclerview_headerview_loading"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:indeterminateDrawable="@drawable/progress_roll" />
+
+                    <ImageView
+                        android:id="@+id/recyclerview_headerview_load_failure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/load_failure"
+                        android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/recyclerview_headerview_arrow_down"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/pull_arrow"
+                            android:visibility="visible" />
+                </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/header_tv_content_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/icon_container"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="22dp"
+                        android:text="下拉刷新"
+                        android:textColor="#bbbbbb"
+                        android:textSize="13sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 放置容器(普通头布局就可以填充到容器里面) -->
+    <FrameLayout
+        android:id="@+id/recyclerview_headerview_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+</LinearLayout>

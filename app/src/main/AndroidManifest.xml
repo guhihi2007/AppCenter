@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="cn.lt.appstore"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+
+    <!-- 小米推送所需权限，，Start -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <permission
+        android:name="cn.lt.appstore.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="cn.lt.appstore.permission.MIPUSH_RECEIVE"/>
+    <!-- 小米推送所需权限,, END -->
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- ibeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!--飞扬权限添加-->
+    <uses-permission android:name="android.permission.ACCESS_WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.REMOVE_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.ACCESS_MTK_MMHW"/>
+    <!--飞扬权限结束-->
+
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 友盟分享所需权限，，开始 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+
+    <!-- 友盟分享所需权限，，结束 -->
+    <application
+        android:name="cn.lt.android.LTApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="BASE_HOST"
+            android:value="${BASE_HOST}"/>
+        <!-- 百度统计部分 start -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="b1d135d3ef"/>
+         
+        <!-- 渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="${channel_lt}"/>
+        <!-- 是否开启错误日志统计，默认为 false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true"/>
+        <!-- 日志发送策略， 可选值： APP_START、 ONCE_A_DAY、 SET_TIME_INTERVAL， 默认为 APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START"/>
+        <!-- 日志发送策略  为 SET_TIME_INTERVAL 时，需设定时间间隔(取消下 行注释)。取值为 1-­‐24 的整数，默认为 1 -->
+        <meta-data
+            android:name="BaiduMobAd_TIME_INTERVAL"
+            android:value="1"/>
+         
+        <!-- 日志仅在 wifi 网络下发送，默认为 false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false"/>
+        <!-- 是否获取基站位置信息  ,默认为 true   -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true"/>
+         
+        <!-- 是否获取 GPS 位置信息，默认为 true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true"/>
+        <!-- 是否获取 WIFI 位置信息，默认为 true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true"/>
+        <!-- 百度统计部分 end -->
+        <!--广点通ID start-->
+        <meta-data
+            android:name="SplashPosID"
+            android:value="${splash_pos_id}"/>
+        <!--广点通ID end-->
+
+        <!--百度开屏广告-->
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="ea0769a9" />
+
+        <activity
+            android:name="cn.lt.android.main.LoadingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppLoadingStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="index"
+                    android:scheme="gamecenter"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="index"
+                    android:scheme="appcenter_chaoqian"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.lt.android.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.AutoInstallLeadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.AppUninstallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.AppUpgradeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.TempActivity"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="cn.lt.android.service.CoreService"
+            android:exported="true"
+            android:process=":core"/>
+        <service
+            android:name="cn.lt.android.plateform.update.PlatUpdateService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/app_name">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.lt.game.update.PlatUpdateService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.lt.android.push.getui.GeTuiIntentService"/>
+
+        <service
+            android:name="cn.lt.android.push.getui.GeTuiService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"/>
+        <!-- 个推SDK配置结束 -->
+
+        <activity
+            android:name="cn.lt.android.main.appdetail.AppDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity android:name="cn.lt.android.main.appdetail.ImageViewPagerActivity"/>
+
+        <!-- 友盟分享，，开始 -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY}"/>
+        <!-- 微信平台分享 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 微博分享 -->
+        <activity
+            android:name="cn.lt.android.umsharesdk.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 友盟分享，，结束 -->
+
+        <receiver android:name="cn.lt.android.receiver.InstallReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cn.lt.android.main.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"
+        />
+        <activity
+            android:name="cn.lt.android.umsharesdk.NoPlatDownActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.recommend.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.recommend.CategoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.AccountCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"
+            android:windowSoftInputMode="stateUnchanged"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.UserInfoEditActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="cn.lt.android.main.recommend.NewAppActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.specialtopic.SpecialTopicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.specialtopic.SpecialTopicDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.feedback.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="cn.lt.android.main.download.TaskManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.personalcenter.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeActivity"/>
+
+        <!-- 监听网络状态改变 -->
+        <!-- <receiver android:name="cn.lt.android.receiver.NetworkChangeReceiver"> -->
+        <!-- <intent-filter android:priority="2147483647"> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service
+            android:name="cn.lt.android.service.NoticeIntentService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.lt.android.service.InstallIntentService"/>
+            </intent-filter>
+        </service>
+
+        <!-- 注册自动装功能 -->
+        <service
+            android:name="cn.lt.android.autoinstall.AccessibilityService"
+            android:label="@string/acc_auto_install_service_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:process=":accessibility">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config"/>
+        </service>
+        <service
+            android:name="cn.lt.android.service.HandleService"
+            android:enabled="true"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":active">
+            <intent-filter>
+                <action android:name="cn.lt.game.START_WAKE_SERVICE"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="cn.lt.android.main.personalcenter.AppInfoBackDoorActivity"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.appdetail.NormalActivity"
+            android:theme="@style/ThemeActivity"/>
+        <activity
+            android:name="cn.lt.android.main.recommend.SmartListActivity"
+            android:theme="@style/ThemeActivity"/>
+
+        <!-- 监听关闭系统的广播接收器 -->
+        <receiver android:name="cn.lt.android.receiver.ShutdownReceiver">
+            <intent-filter>
+
+                <!-- 关机广播 -->
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="cn.lt.android.wake.NotificationClickReceiver"/>
+
+        <service
+            android:name="cn.lt.android.service.ScreenMonitorService"
+            android:enabled="true">
+        </service>
+
+        <service
+            android:name="com.said.service.SystemService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":said"/>
+
+        <activity
+            android:name="com.said.activity.SdWbActivity"
+            android:launchMode="singleInstance"/>
+
+        <!--广点通广告start-->
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <!--广点通广告end-->
+
+        <activity android:name="cn.lt.android.main.SplashADActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppLoadingStyle"/>
+
+        <provider
+            android:name="cn.lt.android.main.personalcenter.UserAccountProvider"
+            android:authorities="cn.lt.appstore.UserAccountProvider"
+            android:exported="true"
+            android:multiprocess="true" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.lt.appstore.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--百度开屏广告-->
+        <activity	android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.baidu.mobads.openad.FileProvider"
+            android:authorities="${packageName}.bd.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bd_file_paths"	/>
+        </provider>
+
+        <service android:name="cn.lt.android.service.LoadingIntentService"
+            />
+
+        <!--芮薇广告start-->
+        <receiver  android:name="com.eoim.aweiz.entity.ConeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <service  android:name="com.eoim.aweiz.entity.CitronService"/>
+        <service  android:name="com.eoim.aweiz.entity.RaspberryService"/>
+        <activity  android:name="com.eoim.aweiz.entity.CactusActivity" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout|fontScale|uiMode" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" android:taskAffinity="com.eoim.aweiz" android:excludeFromRecents="true"/>
+
+        <service android:name="com.aut.wtr.awpl.Awps"
+            android:process=":awp"
+            >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale|uiMode" android:excludeFromRecents="true"
+            android:name="com.aut.wtr.awpl.Awpa" android:process=":awp" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" android:taskAffinity="com.aw.a">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.spr.sum.sspl.Sspls"
+            android:process=":ss"
+            >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale|uiMode" android:excludeFromRecents="true"
+            android:name="com.spr.sum.sspl.Sspla" android:process=":ss" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true" android:taskAffinity="com.ss.a">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!--芮薇广告end-->
+
+
+    </application>
+
+</manifest>

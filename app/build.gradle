@@ -1,0 +1,386 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'AndResGuard'
+
+Properties bundleConfig = new Properties();
+bundleConfig.load(project.rootProject.file('bundleconfig.properties').newDataInputStream())
+
+def buildTime() {
+    return new Date().format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone(TimeZone.getDefault().getID()))
+}
+
+def buildDate() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone(TimeZone.getDefault().getID()))
+}
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.8-RC1'
+    }
+}
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    // 当你使用v2签名的时候，7zip压缩是无法生效的。
+    use7zip = true
+    useSign = true
+    // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+    keepRoot = false
+    whiteList = [
+            // for your icon
+            "R.drawable.icon",
+            // for umeng update
+            "R.string.umeng*",
+            "R.string.UM*",
+            "R.string.tb_*",
+            "R.string.rc_*",
+            "R.layout.umeng*",
+            "R.layout.tb_*",
+            "R.layout.rc_*",
+            "R.drawable.umeng*",
+            "R.drawable.tb_*",
+            "R.drawable.rc_*",
+            "R.drawable.u1*",
+            "R.drawable.u2*",
+            "R.anim.umeng*",
+            "R.color.umeng*",
+            "R.color.tb_*",
+            "R.color.rc_*",
+            "R.style.*UM*",
+            "R.style.umeng*",
+            "R.style.rc_*",
+            "R.id.umeng*",
+            "R.id.rc_*",
+            // umeng share for sina
+            "R.drawable.sina*",
+            // for fabric
+            "R.string.com.crashlytics.*",
+            // for google-services
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key",
+
+            // 个推
+            "R.drawable.push",
+            "R.drawable.push_small",
+            "R.layout.getui_notification",
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "resources.arsc"
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.7'
+//        path = "C:\\Program Files\\7-Zip\\7za.exe"
+    }
+}
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+//解决JDK非0结尾 value 为 3 的错误
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    defaultConfig {
+        applicationId "cn.lt.appstore"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionName VERSION_NAME
+        versionCode VERSION_CODE as int
+        flavorDimensions "CQAC"
+        resValue("string", "build_time", buildTime())
+        //dex突破65535的限制
+        multiDexEnabled true
+        resConfigs "zh", "zh_CN", "zh_HK", "zh_MO", "zh_TW", "en"
+
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+//        }
+
+    }
+
+    //移除lint检查的error
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(KEY_STORE)
+            storePassword KEY_STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_ALIAS_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "IS_DEBUGABLE", "false"
+            manifestPlaceholders = [
+                    BASE_HOST       : BaseHost,
+                    GETUI_APP_ID    : GETUI_APP_ID,
+                    GETUI_APP_KEY   : GETUI_APP_KEY,
+                    GETUI_APP_SECRET: GETUI_APP_SECRET,
+                    UMENG_APPKEY    : UMENG_APPKEY
+            ]
+
+            // Zipalign优化
+            zipAlignEnabled true
+
+            //移除无用的resource文件
+            shrinkResources true
+
+            //是否进行混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 指定签名文件
+            signingConfig signingConfigs.release
+
+            // 可以debug
+            debuggable false
+        }
+        debug {
+            buildConfigField "boolean", "IS_DEBUGABLE", "true"
+            manifestPlaceholders = [
+                    BASE_HOST       : BaseHost_DEBUG,
+                    GETUI_APP_ID    : GETUI_APP_ID_DEBUG,
+                    GETUI_APP_KEY   : GETUI_APP_KEY_DEBUG,
+                    GETUI_APP_SECRET: GETUI_APP_SECRET_DEBUG,
+                    UMENG_APPKEY    : UMENG_APPKEY
+            ]
+
+            // Zipalign优化
+            zipAlignEnabled true
+
+            //移除无用的resource文件
+//            shrinkResources false
+
+            // 是否进行混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 指定签名文件
+            signingConfig signingConfigs.release
+
+            // 可以debug
+            debuggable true
+
+            matchingFallbacks = ['release']
+        }
+
+        dvp {
+            buildConfigField "boolean", "IS_DEBUGABLE", "true"
+            manifestPlaceholders = [
+                    BASE_HOST       : BaseHost_DVP,
+                    GETUI_APP_ID    : GETUI_APP_ID_DEBUG,
+                    GETUI_APP_KEY   : GETUI_APP_KEY_DEBUG,
+                    GETUI_APP_SECRET: GETUI_APP_SECRET_DEBUG,
+                    UMENG_APPKEY    : UMENG_APPKEY
+            ]
+
+            // Zipalign优化
+            zipAlignEnabled true
+
+            //移除无用的resource文件
+            shrinkResources false
+
+            // 是否进行混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 指定签名文件
+            signingConfig signingConfigs.release
+
+            // 可以debug
+            debuggable true
+
+            matchingFallbacks = ['release']
+        }
+    }
+
+//    applicationVariants.all { variant ->
+//
+//        variant.outputs.all {
+//            outputFileName = "AppCenter_v${variant.versionName}_${variant.name}_${variant.versionCode}_${buildDate()}.apk"
+//        }
+//    }
+
+    productFlavors {
+        wwwltblcn {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_1060029426966043"]
+        }
+        baidudingzhi {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        yingyongbao {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        other {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        ziyong {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        _77777 {
+            manifestPlaceholders = [channel_lt: "77777", splash_pos_id: "_1010227496158916"]
+        }
+        _88888 {
+            manifestPlaceholders = [channel_lt: "88888", splash_pos_id: "_2090321446959947"]
+        }
+        _99999 {
+            manifestPlaceholders = [channel_lt: "99999", splash_pos_id: "_8030229476453988"]
+        }
+        underline_lin {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        underline_lin2 {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+
+        szj1 {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+
+        szj2 {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+
+        bbs {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        baidu {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        _360 {
+            manifestPlaceholders = [channel_lt: "360", splash_pos_id: "_3030729476663199"]
+        }
+        xiaoyuan {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+
+        lttest {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+
+        _888880403 {
+            manifestPlaceholders = [channel_lt: "888880403", splash_pos_id: "_3030729476663199"]
+        }
+
+        underline_lin20403 {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+
+        _66666 {
+            manifestPlaceholders = [channel_lt: "66666", splash_pos_id: "_1050822446858965"]
+        }
+        _333333 {
+            manifestPlaceholders = [channel_lt: "333333", splash_pos_id: "_4090321426065052"]
+        }
+        _33333 {
+            manifestPlaceholders = [channel_lt: "333333", splash_pos_id: "_4090321426065052"]
+        }
+        _22222 {
+            manifestPlaceholders = [channel_lt: "22222", splash_pos_id: "_2030221456168031"]
+        }
+        _11111 {
+            manifestPlaceholders = [channel_lt: "11111", splash_pos_id: "_9050826426453969"]
+        }
+        _10234 {
+            manifestPlaceholders = [channel_lt: "10234", splash_pos_id: "_5060228456057806"]
+        }
+        _21345 {
+            manifestPlaceholders = [channel_lt: "21345", splash_pos_id: "_7040025466458954"]
+        }
+        _32456 {
+            manifestPlaceholders = [channel_lt: "32456", splash_pos_id: "_5040724476855900"]
+        }
+        _66234 {
+            manifestPlaceholders = [channel_lt: "66234", splash_pos_id: "_3020524793004513"]
+        }
+        _66123 {
+            manifestPlaceholders = [channel_lt: "66123", splash_pos_id: "_6040129426155913"]
+        }
+        _66345 {
+            manifestPlaceholders = [channel_lt: "66345", splash_pos_id: "_3030729476663199"]
+        }
+        apptest {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_3030729476663199"]
+        }
+        gamecenter {
+            manifestPlaceholders = [channel_lt: name, splash_pos_id: "_7070221609899073"]
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INFTICE.txt'
+        exclude 'META-INFTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INFtice.txt'
+        exclude 'META-INFcense.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.github.bumptech.glide:glide:$glideLibVersion"
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'de.greenrobot:greendao:2.0.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(':LTcommon')
+    compile project(':LTdownload')
+    compile project(':LTpullandloadmore')
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.yolanda.nohttp:nohttp:1.1.0'
+    compile files('libs/Baidu_Mtj_3.7.5.0.jar')
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    // 个推远程依赖
+    compile 'com.getui:sdk:2.10.2.0'
+    // 集成调试神器
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    debugCompile 'com.facebook.stetho:stetho:1.5.0'
+    debugCompile 'com.facebook.stetho:stetho-urlconnection:1.5.0'
+    /*Bugly*/
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.1.0'
+    compile files('libs/GDTUnionSDK.4.9.542.min.jar')
+    compile files('libs/Baidu_MobAds_SDK.jar')
+    compile files('libs/kappmob.jar')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+//    compile 'com.yanzhenjie:permission:1.1.0'
+
+}
+

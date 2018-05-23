@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_empty"
+        layout="@layout/view_empty"
+        android:visibility="gone"/>
+
+    <ViewStub
+        android:id="@+id/view_error_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/view_error_no_network"/>
+
+    <include
+        android:id="@+id/view_loading"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+    <ViewStub
+        android:id="@+id/view_error_not_good_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/view_error_not_good_network"/>
+
+</FrameLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingLayout">
+        <attr name="loadingView" format="reference"/>
+        <attr name="errorView" format="reference"/>
+        <attr name="retryView" format="reference"/>
+        <attr name="emptyView" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color"/>
+        <attr name="pstsUnderlineColor" format="color"/>
+        <attr name="pstsDividerColor" format="color"/>
+        <attr name="pstsDividerWidth" format="dimension"/>
+        <attr name="pstsIndicatorHeight" format="dimension"/>
+        <attr name="pstsIndicatorWidth" format="dimension"/>
+        <attr name="pstsUnderlineHeight" format="dimension"/>
+        <attr name="pstsDividerPadding" format="dimension"/>
+        <attr name="pstsTabPaddingLeftRight" format="dimension"/>
+        <attr name="pstsScrollOffset" format="dimension"/>
+        <attr name="pstsTabBackground" format="reference"/>
+        <attr name="pstsShouldExpand" format="boolean"/>
+        <attr name="pstsTextAllCaps" format="boolean"/>
+        <attr name="cursorBackgroud" format="integer"/>
+        <attr name="theme_type" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="triangular_indicator" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <!--Matrial Design圆形进度-->
+    <declare-styleable name="CircleProgressBar">
+        <attr name="mlpb_inner_radius" format="dimension"/>
+        <attr name="mlpb_background_color" format="color"/>
+        <attr name="mlpb_progress_color" format="color"/>
+        <attr name="mlpb_progress_stoke_width" format="dimension"/>
+        <attr name="mlpb_show_arrow" format="boolean"/>
+        <attr name="mlpb_enable_circle_background" format="boolean"/>
+        <attr name="mlpb_arrow_width" format="dimension"/>
+        <attr name="mlpb_arrow_height" format="dimension"/>
+        <attr name="mlpb_progress" format="integer"/>
+        <attr name="mlpb_max" format="integer"/>
+        <attr name="mlpb_progress_text_size" format="dimension"/>
+        <attr name="mlpb_progress_text_color" format="color"/>
+        <attr name="mlpb_progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CirclePageIndicator">
+        <attr name="spacing" format="dimension"/>
+        <attr name="selectedColor" format="color"/>
+        <attr name="unSelectedColor" format="color"/>
+        <!--<attr name=""-->
+    </declare-styleable>
+
+    <!--ActionBar样式-->
+    <declare-styleable name="ActionBarStyle">
+        <attr name="MyActionBar" format="enum">
+            <enum name="search" value="0"/>
+            <enum name="detail" value="1"/>
+            <enum name="home" value="2"/>
+            <enum name="other" value="3"/>
+            <enum name="personalcenter" value="4"/>
+            <enum name="def" value="5"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BannerView">
+        <attr name="banner_height" format="dimension"/>
+        <attr name="show_point" format="boolean"/>
+        <attr name="show_without_data" format="boolean"/>
+    </declare-styleable>
+
+    <!--可扩展的textview-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandDrawable" format="reference"/>
+        <attr name="collapseDrawable" format="reference"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomDialog">
+        <attr name="bottom_sheet_bg_color" format="color" />
+        <attr name="bottom_sheet_title_text_appearance" format="reference" />
+        <attr name="bottom_sheet_message_text_appearance" format="reference" />
+        <attr name="bottom_sheet_message_title_text_appearance" format="reference" />
+        <attr name="bottom_sheet_button_text_appearance" format="reference" />
+        <attr name="bottom_sheet_item_icon_color" format="color" />
+        <attr name="bottom_sheet_selector" format="reference" />
+        <attr name="bottom_sheet_column_count" format="integer" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2015-05-20"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:background="@drawable/rectangle_grey_corner"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cn.lt.android.widget.CircleImageView
+            android:id="@+id/head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/head"
+            android:background="@drawable/sc_chat_right"
+            android:textColor="@color/light_black"
+            android:layout_marginLeft="69dp"
+            android:textSize="@dimen/font_size_15sp"/>
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/imageProgressBarStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/msg"
+            android:layout_alignTop="@+id/msg"
+            android:layout_marginLeft="-25dp"
+            android:layout_alignLeft="@id/msg"
+            android:indeterminate="true"
+            android:clickable="false"
+            />
+        <ImageView
+            android:id="@+id/failure_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-24dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignLeft="@id/msg"
+            android:src="@mipmap/icon_failure"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

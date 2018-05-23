@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rank_root_game" type="id"/>
+    <item name="rank_root_solf" type="id"/>
+    <item name="data_tag" type="id"/>
+
+    <item name="click_type" type="id"/>
+    <item name="click_date" type="id"/>
+
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+    <item type="id" name="expandable_label"/>
+
+
+
+</resources>

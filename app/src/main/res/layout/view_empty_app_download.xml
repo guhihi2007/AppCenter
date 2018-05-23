@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+            android:gravity="center"
+              android:background="#EDF2F4"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_app_download_empty"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_black"
+        android:layout_marginBottom="14dp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@drawable/sc_blue_corner"
+        android:text="@string/now_download"
+        android:stateListAnimator="@null"
+        android:textColor="@color/white"
+
+        />
+</LinearLayout>

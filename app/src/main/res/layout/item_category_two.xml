@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+    >
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:layout_centerInParent="true"
+        />
+
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/center"
+        app:mrl_rippleAlpha="0.2"
+        app:mrl_rippleColor="@color/ripple_color"
+        app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+        app:mrl_rippleDuration="@integer/ripple_duration"
+        app:mrl_rippleHover="@bool/ripple_hover"
+        app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <RelativeLayout
+            android:id="@+id/category_click_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp">
+
+            <ImageView
+                android:id="@+id/icon_01"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/app_default"
+                />
+
+            <TextView
+                android:id="@+id/name_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/icon_01"
+                android:singleLine="true"
+                android:text="系统安全系统安全"
+                android:textColor="@color/light_black"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/label_left_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/icon_01"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/icon_01"
+                android:background="@drawable/rectangle_grey"
+                android:ellipsize="end"
+                android:maxEms="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/tab_select_color"
+                android:textSize="9sp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/label_right_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/icon_01"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/label_left_01"
+                android:background="@drawable/rectangle_grey"
+                android:ellipsize="end"
+                android:maxEms="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/tab_select_color"
+                android:textSize="9sp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/layout_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/center"
+        app:mrl_rippleAlpha="0.2"
+        app:mrl_rippleColor="@color/ripple_color"
+        app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+        app:mrl_rippleDuration="@integer/ripple_duration"
+        app:mrl_rippleHover="@bool/ripple_hover"
+        app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <RelativeLayout
+            android:id="@+id/category_click_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp">
+
+            <ImageView
+                android:id="@+id/icon_02"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/app_default"
+                />
+
+            <TextView
+                android:id="@+id/name_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/icon_02"
+                android:singleLine="true"
+                android:text="系统安全系统安全"
+                android:textColor="@color/light_black"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/label_left_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/icon_02"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/icon_02"
+                android:background="@drawable/rectangle_grey"
+                android:ellipsize="end"
+                android:maxEms="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/tab_select_color"
+                android:textSize="9sp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/label_right_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/icon_02"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/label_left_02"
+                android:background="@drawable/rectangle_grey"
+                android:ellipsize="end"
+                android:maxEms="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/tab_select_color"
+                android:textSize="9sp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+</RelativeLayout>

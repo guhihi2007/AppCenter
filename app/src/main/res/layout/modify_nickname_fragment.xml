@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_left_top_right_bottom"
+        android:dropDownHorizontalOffset="0dp"
+        android:dropDownSelector="@color/white"
+        android:dropDownVerticalOffset="0dp"
+        android:fadingEdge="none"
+        android:hint=""
+        android:imeOptions="actionNext"
+        android:paddingBottom="10dp"
+        android:paddingLeft="17dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:textColor="@color/app_name_color"
+        android:textColorHint="#bbbbbb"
+        android:textSize="@dimen/font_size_14sp"/>
+
+    <ImageView
+        android:id="@+id/iv_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/et_username"
+        android:layout_alignTop="@id/et_username"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="13dp"
+        android:visibility="gone"
+        android:src="@mipmap/input_del"
+        />
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_username"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:background="@drawable/appdetail_downloadbar_selector"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+</RelativeLayout>

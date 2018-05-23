@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:actionBar="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.lt.android.main.personalcenter.AboutUsActivity">
+
+    <cn.lt.android.widget.ActionBar
+        android:id="@+id/ab_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        actionBar:MyActionBar="def"/>
+
+        <ImageView
+            android:id="@+id/iv_appIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/ab_title"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="50dp"
+            android:onClick="onClick"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_verInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/content_color"
+            android:textSize="14sp"
+            android:layout_toRightOf ="@+id/iv_appIcon"
+            android:layout_alignBottom="@+id/iv_appIcon"
+            android:paddingLeft="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应用市场"
+            android:textColor="@color/app_name_color"
+            android:textSize="17sp"
+            android:layout_toRightOf ="@+id/iv_appIcon"
+            android:layout_above="@+id/tv_verInfo"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="8dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_cs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/iv_appIcon"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="客服QQ：2264237956"
+            android:textColor="@color/app_name_color"
+            android:textSize="15sp"
+            android:drawableLeft="@mipmap/customer_ervice_qq"
+            android:drawablePadding="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/light_grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="客服邮箱：yunying@ltbl.cn"
+            android:textColor="@color/app_name_color"
+            android:textSize="15sp"
+            android:drawableLeft="@mipmap/customer_ervice_email"
+            android:drawablePadding="16dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fenxiangBalabala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ll_cs"
+        android:text="分享给小伙伴们"
+        android:textSize="14sp"
+        android:textColor="@color/content_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_fenxiangBalabala"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+            app:mrl_rippleDuration="@integer/ripple_duration"
+            app:mrl_rippleHover="@bool/ripple_hover"
+            app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <ImageView
+            android:id="@+id/iv_weiXin"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/share_weixin"
+            android:onClick="onClick"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+            app:mrl_rippleDuration="@integer/ripple_duration"
+            app:mrl_rippleHover="@bool/ripple_hover"
+            app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <ImageView
+            android:id="@+id/iv_friendQuan"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/share_friend"
+            android:onClick="onClick"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+            app:mrl_rippleDuration="@integer/ripple_duration"
+            app:mrl_rippleHover="@bool/ripple_hover"
+            app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <ImageView
+            android:id="@+id/iv_qq"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/share_qq"
+            android:onClick="onClick"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+            app:mrl_rippleDuration="@integer/ripple_duration"
+            app:mrl_rippleHover="@bool/ripple_hover"
+            app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <ImageView
+            android:id="@+id/iv_sinaWeibo"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/share_weibo"
+            android:onClick="onClick"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+</RelativeLayout>

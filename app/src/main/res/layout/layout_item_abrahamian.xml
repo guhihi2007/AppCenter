@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:id="@+id/padding_change"
+                android:paddingBottom="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="17dp"
+        android:paddingTop="17dp">
+
+        <ImageView
+            android:id="@+id/iv_center"
+            android:layout_width="106dp"
+            android:layout_height="105.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp"
+            android:src="@mipmap/rank_center2"
+            />
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="106dp"
+            android:layout_height="105.5dp"
+            android:layout_alignTop="@id/iv_center"
+            android:layout_marginTop="26dp"
+            android:layout_toLeftOf="@id/iv_center"
+            android:src="@mipmap/rank_left"
+            />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="106dp"
+            android:layout_height="105.5dp"
+            android:layout_alignTop="@id/iv_center"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/iv_center"
+            android:src="@mipmap/rank_right"
+            />
+
+        <ImageView
+            android:id="@+id/iv_logo_silver_item_rank"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/iv_left"
+            android:layout_alignTop="@id/iv_left"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="-54dp"
+            android:src="@mipmap/app_default"/>
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="29dp"
+            android:layout_alignLeft="@id/iv_logo_silver_item_rank"
+            android:layout_alignTop="@id/iv_logo_silver_item_rank"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/ic_silver"
+            />
+
+        <ImageView
+            android:id="@+id/iv_logo_gold_item_rank"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/iv_center"
+            android:layout_alignTop="@id/iv_center"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="-54dp"
+            android:src="@mipmap/app_default"/>
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="29dp"
+            android:layout_alignLeft="@id/iv_logo_gold_item_rank"
+            android:layout_alignTop="@id/iv_logo_gold_item_rank"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/ic_gold"
+            />
+
+        <ImageView
+            android:id="@+id/iv_logo_bronze_item_rank"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/iv_right"
+            android:layout_alignTop="@id/iv_right"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="-54dp"
+            android:src="@mipmap/app_default"/>
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="29dp"
+            android:layout_alignLeft="@id/iv_logo_bronze_item_rank"
+            android:layout_alignTop="@id/iv_logo_bronze_item_rank"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/ic_bronze"
+            />
+
+        <TextView
+            android:id="@+id/tv_name_silver_rank_item"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_left"
+            android:layout_alignTop="@id/iv_left"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="-3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/app_name_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_download_silver_rank_item"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_left"
+            android:layout_below="@id/tv_name_silver_rank_item"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/app_size_color"
+            android:textSize="12sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_name_gold_rank_item"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_center"
+            android:layout_alignTop="@id/iv_center"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="-3dp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/app_name_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_download_gold_rank_item"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_center"
+            android:layout_below="@id/tv_name_gold_rank_item"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/app_size_color"
+            android:textSize="12sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_name_bronze_rank_item"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_right"
+            android:layout_alignTop="@id/iv_right"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="-3dp"
+            android:textColor="@color/app_name_color"
+            android:gravity="center"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="14sp"/>
+
+        <cn.lt.android.main.download.DownloadButton
+            android:id="@+id/db_gold_rank_item"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_below="@id/tv_download_gold_rank_item"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
+            />
+
+        <cn.lt.android.main.download.DownloadButton
+            android:id="@+id/db_bronze_rank_item"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_alignTop="@id/db_gold_rank_item"
+            android:layout_marginLeft="46dp"
+            android:layout_toRightOf="@id/db_gold_rank_item"
+            />
+
+
+        <cn.lt.android.main.download.DownloadButton
+            android:id="@+id/db_silver_rank_item"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_alignTop="@id/db_gold_rank_item"
+            android:layout_marginRight="46dp"
+            android:layout_toLeftOf="@id/db_gold_rank_item"
+            />
+        <TextView
+            android:id="@+id/tv_download_bronze_rank_item"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/app_size_color"
+            android:textSize="12sp" android:layout_below="@+id/tv_name_bronze_rank_item"
+            android:layout_toRightOf="@+id/iv_center" android:layout_toEndOf="@+id/iv_center"/>
+    </RelativeLayout>
+
+</RelativeLayout>

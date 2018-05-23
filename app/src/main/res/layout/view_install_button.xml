@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/download_click_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true">
+
+        <FrameLayout
+            android:id="@+id/fl_cqTextView"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:background="@drawable/rectangle_blue_corner">
+            <cn.lt.android.widget.CQTextView
+                android:id="@+id/cqTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <ViewStub
+            android:id="@+id/progressBarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout="@layout/layout_download_button_progressbar" />
+
+    </FrameLayout>
+</merge>

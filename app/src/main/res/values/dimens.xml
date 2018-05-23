@@ -1,0 +1,45 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="font_size_10sp">10sp</dimen>
+    <dimen name="font_size_11sp">11sp</dimen>
+    <dimen name="font_size_12sp">12sp</dimen>
+    <dimen name="font_size_14sp">14sp</dimen>
+    <dimen name="font_size_15sp">15sp</dimen>
+    <dimen name="font_size_17sp">17sp</dimen>
+
+    <!-- 标签相关属性 -->
+    <dimen name="notic_title_padding_left">10dp</dimen>
+
+
+    <dimen name="height_50dp">50dp</dimen>
+    <!-- 首页精选框的最大高度值 -->
+    <dimen name="index_requisite_max_hieght">398dp</dimen>
+    <dimen name="border_width">1px</dimen>
+
+    <!-- 应用详情   推荐游戏、猜你喜欢相关属性 -->
+    <dimen name="carousel_pointView_height">6dp</dimen>
+    <dimen name="carousel_pointView_margin">4dp</dimen>
+    <!-- 轮播图尺寸 -->
+    <dimen name="banner_height">140dp</dimen>
+    <dimen name="padding_eight_dp">8dp</dimen>
+
+    <!-- 回馈页面item的间隔距离 -->
+    <dimen name="feedBackItemSpace">12dp</dimen>
+
+    <!-- 推荐页二级入口图片大小-->
+    <dimen name="recommended_entrance_image_width">498px</dimen>
+    <dimen name="recommended_entrance_image_height">222px</dimen>
+
+    <!-- 专题图片大小(根据后台服务器下载的图片大小)-->
+    <dimen name="specialTopic_image_width">684px</dimen>
+    <dimen name="specialTopic_image_height">228px</dimen>
+
+    <!--轮播图图片大小（根据后台服务器下载的图片大小）-->
+    <dimen name="bannerView_image_width">720px</dimen>
+    <dimen name="bannerView_image_height">282px</dimen>
+    <!-- 分割线两边边距 -->
+    <dimen name="line_common_margin">12dp</dimen>
+</resources>

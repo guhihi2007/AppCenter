@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/change_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ViewStub
+        android:id="@+id/viewStub_title_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_item_garbview_title">
+    </ViewStub>
+
+
+    <LinearLayout
+        android:id="@+id/llt_root_game_square"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="18dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>

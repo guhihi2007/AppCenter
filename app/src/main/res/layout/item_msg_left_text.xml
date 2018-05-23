@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-05-20"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:background="@drawable/rectangle_grey_corner"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+    
+    <cn.lt.android.widget.CircleImageView
+        android:id="@+id/head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/time"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="3dp"
+        android:layout_below="@id/time"
+        android:layout_toRightOf="@+id/head"
+        android:background="@drawable/sc_chat_left"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="69dp"
+        android:textSize="@dimen/font_size_15sp"
+        android:textColor="@color/light_black"/>
+</RelativeLayout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_color"
+              android:orientation="vertical">
+
+    <cn.lt.android.widget.ActionBar
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MyActionBar="def"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+
+            <!--安装设置-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="15dp"
+                android:text="下载设置"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/font_size_14sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="14dp"
+                        android:text="安装包下载位置"
+                        android:textColor="@color/app_name_color"
+                        android:textSize="@dimen/font_size_15sp"/>
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="@color/content_color"
+                        android:textSize="10sp"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/line_common_margin"
+                    android:layout_marginRight="@dimen/line_common_margin"
+                    android:background="@color/light_grey"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_autoUpgradeApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="14dp"
+                            android:text="零流量升级"
+                            android:textColor="@color/app_name_color"
+                            android:textSize="@dimen/font_size_15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:paddingLeft="14dp"
+                            android:singleLine="true"
+                            android:text="开启后，Wi-Fi网络下自动下载应用升级包"
+                            android:textColor="@color/app_size_color"
+                            android:textSize="@dimen/font_size_10sp"/>
+
+
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:id="@+id/btn_auto_upgrade_app"
+                        android:layout_width="50dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="#00000000"
+                        android:button="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn=""/>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/line_common_margin"
+                    android:layout_marginRight="@dimen/line_common_margin"
+                    android:background="@color/light_grey"/>
+
+                <TextView
+                    android:id="@+id/tv_autoUpgradeExplain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="10dp"
+                    android:text="1、不消耗流量\n仅处于Wi-Fi网络才进行下载，支持断点续传\n\n2、不影响性能\n仅手机CPU使用率高于30%时，该功能才生效;\n打开天天应用市场后，该功能暂停\n\n3、不浪费空间\n更新完后，自动清除安装包"
+                    android:textColor="@color/app_size_color"
+                    android:textSize="@dimen/font_size_10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_autoUpgradeExplainBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="∧  收起说明"
+                    android:textColor="@color/app_size_color"
+                    android:textSize="@dimen/font_size_10sp"/>
+
+
+            </LinearLayout>
+            <!--安装设置-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="15dp"
+                android:text="安装设置"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/font_size_14sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_rootInstall"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_toLeftOf="@+id/root_install"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="14dp"
+                            android:text="Root用户快速安装"
+                            android:textColor="@color/app_name_color"
+                            android:textSize="@dimen/font_size_15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:paddingLeft="14dp"
+                            android:singleLine="true"
+                            android:text="下载完成后自动安装（需Root权限）"
+                            android:textColor="@color/app_size_color"
+                            android:textSize="@dimen/font_size_10sp"/>
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:id="@+id/root_install"
+                        android:layout_width="50dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="#00000000"
+                        android:button="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn=""/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/ll_rootInstall"
+                        android:layout_marginLeft="@dimen/line_common_margin"
+                        android:layout_marginRight="@dimen/line_common_margin"
+                        android:background="@color/light_grey"/>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_toLeftOf="@+id/auto_delete"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="14dp"
+                            android:text="自动删除安装包"
+                            android:textColor="@color/app_name_color"
+                            android:textSize="@dimen/font_size_15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="14dp"
+                            android:singleLine="true"
+                            android:text="应用安装完成后，自动删除安装包"
+                            android:textColor="@color/app_size_color"
+                            android:textSize="@dimen/font_size_10sp"/>
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:id="@+id/auto_delete"
+                        android:layout_width="50dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="#00000000"
+                        android:button="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn=""/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/line_common_margin"
+                    android:layout_marginRight="@dimen/line_common_margin"
+                    android:background="@color/light_grey"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_toLeftOf="@+id/auto_install_no_root"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="14dp"
+                            android:text="自动安装应用"
+                            android:textColor="@color/app_name_color"
+                            android:textSize="@dimen/font_size_15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:paddingLeft="14dp"
+                            android:singleLine="true"
+                            android:text="安装应用时，省去繁琐点击"
+                            android:textColor="@color/app_size_color"
+                            android:textSize="@dimen/font_size_10sp"/>
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:id="@+id/auto_install_no_root"
+                        android:layout_width="50dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="#00000000"
+                        android:button="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn=""/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

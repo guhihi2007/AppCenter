@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="15dp"
+    android:paddingLeft="11dp"
+    android:paddingRight="20dp"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_toLeftOf="@+id/rl_downloadbar"
+        android:layout_alignTop="@+id/rl_appRoot"
+        android:layout_alignBottom="@+id/rl_appRoot"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_delete"
+        android:layout_marginRight="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_downloadbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent">
+
+        <cn.lt.android.main.download.DownloadButton
+            android:id="@+id/download_button"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_appRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/delete">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="9dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/app_default"/>
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/icon"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/icon"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="增强版这是我的应用名字我的应用"
+            android:textColor="@color/app_name_color"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/app_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_centerVertical="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/app_size_color"
+            android:textSize="13sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_alignBottom="@id/icon"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:id="@+id/network_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_wifi"
+                />
+
+            <TextView
+                android:id="@+id/download_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="60dp"
+                android:layout_marginLeft="3dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="0KB/s"
+                android:textColor="@color/app_size_color"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/download_surplus_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/app_size_color"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="light_grey">#eeeeee</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#99000000</color>
+    <color name="btn_press">#22000000</color>
+
+    <color name="progress_bar_background_light">#FFFAFAFA</color>
+    <color name="progress_bar_color">@color/black</color>
+
+    <color name="tool_bar_color">#1D84ED</color>
+    <color name="grey_bg">#EDF2F4</color>
+    <color name="background_color">#edf2f4</color>
+    <color name="app_theme_color">#1D84ED</color>
+
+    <color name="divider_grey">#DDDDDD</color>
+
+    <color name="divider_grey_personal_center">#eeeeee</color>
+
+    <color name="content_color">#777777</color>
+    <color name="tab_select_color">#999999</color>
+
+    <color name="orange">#ff5e18</color>
+    <color name="gray">#8fbbe8</color>
+    <color name="free_flow_bg">#ff0000</color>
+
+    <color name="notification_app_name">#1d84ed</color>
+    <color name="notification_text_open">#FF5E18</color>
+    <color name="notification_text_retry">#999999</color>
+    <color name="notification_text_install">#FFFFFF</color>
+    <color name="notification_text_upgrade">#FFC000</color>
+    <color name="app_name_color">#333333</color>
+    <color name="app_size_color">#999999</color>
+    <color name="gray_color">#999999</color>
+    <color name="light_black">#333333</color>
+
+    <color name="app_down_count_color">#ff5e18</color>
+
+
+</resources>

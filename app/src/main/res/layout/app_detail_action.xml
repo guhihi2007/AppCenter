@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:id="@+id/new_activity"
+    android:background="@drawable/border_left_top_right_bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        >
+
+        <TextView
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@color/app_theme_color"
+            android:gravity="center"
+            android:text="最新活动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12sp"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_arrow_down"/>
+        <TextView
+            android:id="@+id/tv_arrow_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展开"
+            android:padding="2dp"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@id/iv_arrow_action"
+            android:layout_centerVertical="true"
+            android:textColor="@color/app_theme_color"
+            android:textSize="13sp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_app_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:text="应用描述"
+        android:textColor="#333"
+        android:lineSpacingExtra="5dp"
+        android:visibility="invisible"
+        android:textSize="@dimen/font_size_14sp"/>
+</LinearLayout>

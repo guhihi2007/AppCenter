@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_square_game_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_square_game_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:gravity="center|top"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxEms="4"
+        android:textColor="@color/app_name_color"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tagSizeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:maxWidth="70dp"
+        android:singleLine="true"
+        android:textColor="@color/app_size_color"
+        android:textSize="12sp"/>
+    <cn.lt.android.main.download.DownloadButton
+        android:id="@+id/download_button"
+        android:layout_width="60dp"
+        android:layout_height="23dp"
+        android:layout_below="@id/tagSizeTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+    />
+
+</RelativeLayout>

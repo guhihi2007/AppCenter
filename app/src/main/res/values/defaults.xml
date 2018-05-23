@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="default_circle_indicator_centered">true</bool>
+    <color name="default_circle_indicator_fill_color">#9BA8BF</color>
+    <color name="default_circle_indicator_page_color">#EDF2F4</color>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <color name="default_circle_indicator_stroke_color">#FFE1FF</color>
+    <dimen name="default_circle_indicator_stroke_width">0dp</dimen>
+    <!-- ripple 默认效果值 -->
+    <color name="ripple_color">#585858</color>
+    <bool name="ripple_delay_click">true</bool>
+    <bool name="ripple_hover">true</bool>
+    <bool name="ripple_overlay">true</bool>
+    <integer name="ripple_duration">250</integer>
+</resources>

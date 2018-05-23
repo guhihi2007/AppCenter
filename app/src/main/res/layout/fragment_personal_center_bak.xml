@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent">
+
+
+    <!--android:background="@color/background_color"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/app_theme_color">
+
+            <ImageView
+                android:id="@+id/civ_user_head"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="30dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tv_login_tip"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/civ_user_head"
+                android:background="@drawable/rectangle_orange_corner"
+                android:drawableRight="@mipmap/ic_login_tip"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="请登录账号"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/tv_login_tip"
+                android:background="@drawable/regist_tv_bg"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text="注册账号"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_12sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_register"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="用户名"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_17sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_login_tip" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--下面部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_user_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!--应用升级-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_app_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_update"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/app_update" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_app_update"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="应用升级"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_app_update_arrow"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/personal_goahead" />
+
+
+                    <TextView
+                        android:id="@+id/iv_app_update_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_alignRight="@id/iv_app_update_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/shape_red_rectangle"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/divider_grey_personal_center" />
+
+
+            <!--任务管理-->
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_app_task_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_task_manager"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/task_manager" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_app_task_manager"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="任务管理"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_app_task_manager_arrow"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/personal_goahead" />
+
+
+                    <TextView
+                        android:id="@+id/iv_app_task_manager_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_alignRight="@id/iv_app_task_manager_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/shape_red_circle"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="9"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/divider_grey_personal_center" />
+
+            <!--应用卸载-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_app_uninstall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_uninstall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/app_uninstall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_app_uninstall"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="应用卸载"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/personal_goahead" />
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/divider_grey_personal_center" />
+
+            <!--应用设置-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_app_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_setting"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/settings" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_app_setting"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="应用设置"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/personal_goahead" />
+
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/divider_grey_personal_center" />
+
+            <!--版本升级-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_version_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_version_update"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/version_update" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_version_update"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="版本升级"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_version_update_arrow"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/personal_goahead" />
+
+                    <TextView
+                        android:id="@+id/tv_version_update_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/iv_version_update_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="24dp"
+                        android:background="#ff0000"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="New"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/divider_grey_personal_center" />
+            <!--关于我们-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_app_about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_aboutus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/about_us" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_app_aboutus"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="关于我们"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/personal_goahead" />
+
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/divider_grey_personal_center" />
+
+            <!--退出应用-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple_color"
+                app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+                app:mrl_rippleDuration="@integer/ripple_duration"
+                app:mrl_rippleHover="@bool/ripple_hover"
+                app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+                <RelativeLayout
+                    android:id="@+id/rl_iv_app_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_exit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/exit_app" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_app_exit"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="退出应用市场"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

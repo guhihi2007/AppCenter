@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <!-- 账号输入 -->
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_left_top_right_bottom"
+        android:dropDownHorizontalOffset="0dp"
+        android:dropDownSelector="@color/white"
+        android:dropDownVerticalOffset="0dp"
+        android:fadingEdge="none"
+        android:hint="请输入11位数电话号码"
+        android:imeOptions="actionNext"
+        android:paddingBottom="10dp"
+        android:paddingLeft="17dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:inputType="phone"
+        android:textColor="@color/app_name_color"
+        android:textColorHint="#bbbbbb"
+        android:textSize="@dimen/font_size_14sp"/>
+
+    <ImageView
+        android:id="@+id/iv_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/et_account"
+        android:layout_alignTop="@id/et_account"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/input_del"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/et_account"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/border_left_top_right_bottom"
+        android:dropDownSelector="@color/white"
+        android:hint="密码至少为6-20个字符"
+        android:imeOptions="actionNext"
+        android:paddingBottom="10dp"
+        android:paddingLeft="17dp"
+        android:paddingTop="10dp"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@color/app_name_color"
+        android:textColorHint="#bbbbbb"
+        android:textSize="@dimen/font_size_14sp"/>
+    <CheckBox
+        android:id="@+id/iv_eye"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/iv_del"
+        android:layout_above="@+id/tv_getCode"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="13dp"
+        android:enabled="false"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="centerInside"
+        android:button="@drawable/eye_selector"
+        />
+
+    <ImageView
+        android:id="@+id/iv_del2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_eye"
+        android:layout_alignTop="@+id/et_password"
+        android:layout_marginTop="13dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible"
+        android:src="@mipmap/input_del"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_getCode"
+        android:layout_width="97dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/et_password"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/appdetail_downloadbar_selector"
+        android:text="获取验证码"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_14sp"/>
+
+    <EditText
+        android:id="@+id/et_vertifyCode"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/et_password"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@id/tv_getCode"
+        android:background="@drawable/border_left_top_right_bottom"
+        android:dropDownSelector="@color/white"
+        android:hint="请输入验证码"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:paddingBottom="10dp"
+        android:paddingLeft="17dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:textColor="@color/app_name_color"
+        android:textColorHint="#bbbbbb"
+        android:textSize="@dimen/font_size_14sp"/>
+
+    <TextView
+        android:id="@+id/tv_onekey_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_vertifyCode"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/appdetail_downloadbar_selector"
+        android:gravity="center"
+        android:text="一键注册"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_onekey_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_register_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="注册应用市场账号表示你同意"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/font_size_11sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_register_new"
+            android:text="最终用户协议"
+            android:textColor="@color/app_theme_color"
+            android:textSize="@dimen/font_size_11sp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_old_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_deal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:text="已有账号登录"
+        android:textColor="@color/app_theme_color"
+        android:textSize="@dimen/font_size_14sp"
+        />
+</RelativeLayout>

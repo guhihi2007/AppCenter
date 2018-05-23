@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LTCommon</string>
+    <string name="copy_aleardy">已复制</string>
+
+
+
+    <string name="fuzzydatetime__seconds_ago">%d 秒前</string>
+    <string name="fuzzydatetime__minutes_ago">%d 分钟前</string>
+    <string name="fuzzydatetime__hours_ago">%d 小时前</string>
+    <string name="fuzzydatetime__days_ago">%d 天前</string>
+    <string name="fuzzydatetime__weeks_ago">%d 周前</string>
+    <string name="fuzzydatetime__months_ago">%d 月前</string>
+    <string name="fuzzydatetime__years_ago">%d 年前</string>
+
+</resources>

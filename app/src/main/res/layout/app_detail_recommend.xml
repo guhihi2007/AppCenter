@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="8dp"
+              android:background="@drawable/border_left_top_right_bottom"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tv_recommend_tag"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="@color/app_theme_color"
+            android:gravity="center"
+            android:text="我们发现"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12sp"/>
+
+        <TextView
+            android:id="@+id/tv_recomment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_recommend_tag"
+            android:text="大家都在用"
+            android:textColor="#333"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <!-- 游戏推荐水平滚动栏 -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/detail_game_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
+    </HorizontalScrollView>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text="斗地主"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/font_size_14sp"/>
+
+        <TextView
+            android:id="@+id/tv_app_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:text="21.5M"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/font_size_12sp"/>
+
+
+        <cn.lt.android.main.download.DownloadButton
+            android:id="@+id/recommend_downloadBtn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+</LinearLayout>

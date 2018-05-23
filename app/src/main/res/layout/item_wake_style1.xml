@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_grey_rect"
+        android:gravity="center|left"
+        android:padding="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+            android:src="@mipmap/version_update" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_icon"
+            android:layout_toRightOf="@id/iv_icon"
+            android:orientation="vertical"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:id="@+id/tv_content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="内容文本"
+                android:textColor="#deFFFFFF"
+                android:textSize="14sp" />
+
+            <!--android:textAppearance="@android:style/TextAppearance.Material.Notification.Title"-->
+
+            <TextView
+                android:id="@+id/tv_content_sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="内容付文本"
+                android:textColor="#78FFFFFF"
+                android:textSize="10sp" />
+
+            <!--android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"-->
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/body"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="15dp"
+    android:paddingRight="20dp"
+    android:paddingTop="15dp"
+    android:descendantFocusability="afterDescendants">
+
+
+
+    <ImageView
+        android:id="@+id/iv_logo_app_item"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@+id/tv_number_single"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/app_default"/>
+
+    <FrameLayout
+        android:id="@+id/rl_DownBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/iv_logo_app_item"
+        android:layout_alignBottom="@+id/iv_logo_app_item"
+        android:gravity="center">
+        <cn.lt.android.main.download.DownloadButton
+            android:id="@+id/download_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <ViewStub
+        android:id="@+id/viewStub_number"
+        android:layout="@layout/layout_single_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"/>
+
+
+    <Space
+        android:id="@+id/tv_number_single"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/tv_name_count_size_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_logo_app_item"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/iv_logo_app_item"
+        android:layout_toLeftOf="@+id/rl_DownBtn"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:lineSpacingExtra="7dp"
+        android:textColor="@color/app_name_color"
+        android:textSize="15sp"/>
+
+    <ViewStub
+        android:id="@+id/viewStub_iv_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout="@layout/layout_iv_mark"/>
+
+
+
+
+
+</RelativeLayout>

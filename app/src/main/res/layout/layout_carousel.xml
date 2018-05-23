@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bannerview_defult_imageview"
+    >
+
+    <cn.lt.android.main.entrance.item.view.carousel.MyGallery
+        android:id="@+id/vp_banner_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/banner_height"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/llt_point_root_banner_view"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_alignBottom="@id/vp_banner_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"/>
+
+</RelativeLayout>

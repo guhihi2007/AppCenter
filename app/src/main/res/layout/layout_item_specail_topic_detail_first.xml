@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_stdinfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="17dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/iv_sTopicImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_sTopicTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_below="@id/iv_sTopicImage"
+        android:text="专题主题专题主题专题主题专题主题专题主题专题主题专题主题专题主题专题主题"
+        android:textColor="@color/app_name_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_sTopicIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_sTopicTitle"
+        android:text="简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介"
+        android:textColor="@color/gray_color"
+        android:textSize="12sp"
+        android:maxLength="120"
+        android:ellipsize="end"/>
+
+</RelativeLayout>

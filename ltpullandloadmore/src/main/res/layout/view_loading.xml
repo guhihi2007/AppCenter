@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:juice="http://schemas.android.com/apk/res-auto">
+        <cn.lt.pullandloadmore.util.MyGifUtil
+            android:id="@+id/view_loading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            juice:loading_width="100"
+            juice:loading_height="100"/>
+
+
+        <TextView
+            android:id="@+id/view_loading_text"
+            android:layout_below="@id/view_loading"
+            android:layout_marginTop="14dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_data"
+            android:textColor="#777777"
+            android:textSize="14sp" />
+
+</RelativeLayout>

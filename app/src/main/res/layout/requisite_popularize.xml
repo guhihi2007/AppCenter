@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent_half"
+                android:gravity="bottom">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_requiste_popularize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/app_default"/>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/bt_cancel_requisite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/roundness_white_whole"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_close"/>
+    </RelativeLayout>
+</RelativeLayout>

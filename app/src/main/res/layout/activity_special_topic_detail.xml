@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="cn.lt.android.main.specialtopic.SpecialTopicDetailActivity">
+
+    <cn.lt.android.widget.ActionBar
+        android:id="@+id/ab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MyActionBar="other" />
+
+    <cn.lt.pullandloadmore.LoadingLayout
+        android:id="@+id/faultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fl_oneKey"
+        android:layout_below="@+id/ab">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_appList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp"
+            />
+    </cn.lt.pullandloadmore.LoadingLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/fl_oneKey"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/divider_grey" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/appdetail_downloadbar_selector"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="@bool/ripple_delay_click"
+            app:mrl_rippleDuration="@integer/ripple_duration"
+            app:mrl_rippleHover="@bool/ripple_hover"
+            app:mrl_rippleOverlay="@bool/ripple_overlay">
+
+        <Button
+            android:id="@+id/btn_oneKeyAction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="一键下载"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:background="@null"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

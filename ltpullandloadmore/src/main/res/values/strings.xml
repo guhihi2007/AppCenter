@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LTPullAndLoadmore</string>
+
+    <string name="no_data">没有数据</string>
+    <string name="load_again">刷新</string>
+    <string name="network_setting">网络设置</string>
+    <string name="loading">加载中...</string>
+    <string name="loading_data">年轻人不要着急,待会就出来了</string>
+    <string name="no_more_data">哎呀~已经到底啦</string>
+</resources>

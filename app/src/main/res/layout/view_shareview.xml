@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:id="@+id/share_qqIv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="6dp"
+        android:drawableTop="@mipmap/share_qq"
+        android:gravity="center"
+        android:text="QQ分享"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_size_14sp"/>
+
+    <TextView
+        android:id="@+id/share_pyqIv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="6dp"
+        android:drawableTop="@mipmap/share_friend"
+        android:gravity="center"
+        android:text="朋友圈分享"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_size_14sp"/>
+
+
+    <TextView
+        android:id="@+id/share_sinaIv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="6dp"
+        android:drawableTop="@mipmap/share_weibo"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="微博分享"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_size_14sp"/>
+
+    <TextView
+        android:id="@+id/share_wechatIv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="6dp"
+        android:drawableTop="@mipmap/share_weixin"
+        android:gravity="center"
+        android:text="微信分享"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_size_14sp"/>
+
+</LinearLayout>

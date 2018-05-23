@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sc_white_blue"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/sc_tab_mine" />
+
+        <TextView
+            android:id="@+id/iv_point"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="16dp"
+            android:textSize="@dimen/font_size_10sp"
+            android:gravity="center"
+            android:layout_marginTop="1px"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_red_circle"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="@string/mine"
+        android:textColor="@color/sc_grey_white"
+        android:textSize="12sp" />
+
+</LinearLayout>
+
