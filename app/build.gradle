@@ -86,7 +86,6 @@ andResGuard {
 }
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
     useLibrary 'org.apache.http.legacy'
 //解决JDK非0结尾 value 为 3 的错误
     dexOptions {
@@ -379,7 +378,7 @@ dependencies {
     compile files('libs/GDTUnionSDK.4.9.542.min.jar')
     compile files('libs/Baidu_MobAds_SDK.jar')
     compile files('libs/kappmob.jar')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    compile 'com.yanzhenjie:permission:1.1.0'
 
 }

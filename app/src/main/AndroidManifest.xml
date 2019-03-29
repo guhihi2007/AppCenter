@@ -97,9 +97,7 @@
         <!-- 百度统计部分 start -->
         <meta-data
             android:name="BaiduMobAd_STAT_ID"
-            android:value="b1d135d3ef"/>
-         
-        <!-- 渠道商编号 -->
+            android:value="b1d135d3ef"/><!-- 渠道商编号 -->
         <meta-data
             android:name="BaiduMobAd_CHANNEL"
             android:value="${channel_lt}"/>
@@ -114,18 +112,14 @@
         <!-- 日志发送策略  为 SET_TIME_INTERVAL 时，需设定时间间隔(取消下 行注释)。取值为 1-­‐24 的整数，默认为 1 -->
         <meta-data
             android:name="BaiduMobAd_TIME_INTERVAL"
-            android:value="1"/>
-         
-        <!-- 日志仅在 wifi 网络下发送，默认为 false -->
+            android:value="1"/><!-- 日志仅在 wifi 网络下发送，默认为 false -->
         <meta-data
             android:name="BaiduMobAd_ONLY_WIFI"
             android:value="false"/>
         <!-- 是否获取基站位置信息  ,默认为 true   -->
         <meta-data
             android:name="BaiduMobAd_CELL_LOCATION"
-            android:value="true"/>
-         
-        <!-- 是否获取 GPS 位置信息，默认为 true -->
+            android:value="true"/><!-- 是否获取 GPS 位置信息，默认为 true -->
         <meta-data
             android:name="BaiduMobAd_GPS_LOCATION"
             android:value="true"/>
